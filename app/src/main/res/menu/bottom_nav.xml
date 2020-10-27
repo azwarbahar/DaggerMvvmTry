@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/movie_graph"
+        android:contentDescription="@string/movie"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/movie" />
+
+    <item
+        android:id="@+id/favorites_graph"
+        android:contentDescription="@string/favorite"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/favorite" />
+
+</menu>
