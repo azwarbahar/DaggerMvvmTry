@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry
+package com.example.popularmovies_kotlin
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

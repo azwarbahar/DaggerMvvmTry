@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry
+package com.example.popularmovies_kotlin
 
 import org.junit.Test
 

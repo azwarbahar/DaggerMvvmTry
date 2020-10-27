@@ -1,11 +1,11 @@
-package com.example.daggermvvmtry.ui.home
+package com.example.popularmovies_kotlin.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.daggermvvmtry.api.model.Movie
-import com.example.daggermvvmtry.api.repository.MovieRepository
-import com.example.daggermvvmtry.MovieApiStatus
+import com.example.popularmovies_kotlin.api.models.Movie
+import com.example.popularmovies_kotlin.api.repository.MovieRepository
+import com.example.popularmovies_kotlin.MovieApiStatus
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -81,5 +81,8 @@ class HomeViewModel @Inject constructor(private val movieRepository: MovieReposi
 
 enum class MovieApiFilter(val value: String) {
     POPULAR_MOVIES("popularity.desc"),
+    RELEASE_MOVIE("release_date.desc"),
+    REVENUE_MOVIES("revenue.desc"),
+    VOTE_MOVIES("vote_average.desc"),
     TOP_RATED_MOVIES("vote_count.desc")
 }

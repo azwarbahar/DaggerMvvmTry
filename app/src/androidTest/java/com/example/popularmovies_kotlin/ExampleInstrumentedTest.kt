@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry
+package com.example.popularmovies_kotlin
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

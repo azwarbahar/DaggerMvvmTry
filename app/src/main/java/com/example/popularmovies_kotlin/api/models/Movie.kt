@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry.api.model
+package com.example.popularmovies_kotlin.api.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

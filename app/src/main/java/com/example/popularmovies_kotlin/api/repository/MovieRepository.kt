@@ -1,10 +1,10 @@
-package com.example.daggermvvmtry.api.repository
+package com.example.popularmovies_kotlin.api.repository
 
-import com.example.daggermvvmtry.api.MovieApi
-import com.example.daggermvvmtry.api.model.MoviesResult
-import com.example.daggermvvmtry.api.model.TrailersResult
-import com.example.daggermvvmtry.ui.home.MovieApiFilter
-import com.example.daggermvvmtry.Const
+import com.example.popularmovies_kotlin.api.MovieApi
+import com.example.popularmovies_kotlin.api.models.MoviesResult
+import com.example.popularmovies_kotlin.api.models.TrailersResult
+import com.example.popularmovies_kotlin.ui.home.MovieApiFilter
+import com.example.popularmovies_kotlin.Const
 import kotlinx.coroutines.Deferred
 import javax.inject.Inject
 

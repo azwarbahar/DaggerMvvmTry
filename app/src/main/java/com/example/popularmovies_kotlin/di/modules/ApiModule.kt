@@ -1,8 +1,8 @@
-package com.example.daggermvvmtry.di.modules
+package com.example.popularmovies_kotlin.di.modules
 
-import android.app.Application
-import com.example.daggermvvmtry.api.MovieApi
-import com.example.daggermvvmtry.Const
+
+import com.example.popularmovies_kotlin.api.MovieApi
+import com.example.popularmovies_kotlin.Const
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
@@ -19,14 +19,16 @@ class ApiModule {
     @Provides
     @Reusable
     fun providesRetrofit(
-                         okHttpClient: OkHttpClient.Builder): MovieApi =
+        okHttpClient: OkHttpClient.Builder
+    ): MovieApi =
         Retrofit.Builder()
             .baseUrl(Const.BASE_URL)
             .client(
                 okHttpClient
                     .build()
             )
-            .addConverterFactory( GsonConverterFactory.create(
+            .addConverterFactory(
+                GsonConverterFactory.create(
                 )
             )
             .addCallAdapterFactory(CoroutineCallAdapterFactory())

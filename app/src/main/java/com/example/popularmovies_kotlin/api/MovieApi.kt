@@ -1,7 +1,7 @@
-package com.example.daggermvvmtry.api
+package com.example.popularmovies_kotlin.api
 
-import com.example.daggermvvmtry.api.model.MoviesResult
-import com.example.daggermvvmtry.api.model.TrailersResult
+import com.example.popularmovies_kotlin.api.models.MoviesResult
+import com.example.popularmovies_kotlin.api.models.TrailersResult
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path

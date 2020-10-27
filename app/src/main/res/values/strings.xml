@@ -12,4 +12,8 @@
     <string name="play_image">Play Image</string>
     <string name="trailer_image">Trailer Image</string>
     <string name="top_rated">Top Rated</string>
+    <string name="popular">Popular</string>
+    <string name="revenue">Revenue</string>
+    <string name="vote">Vote</string>
+    <string name="release">Release</string>
 </resources>

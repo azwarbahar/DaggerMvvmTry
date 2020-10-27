@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry.ui.detail
+package com.example.popularmovies_kotlin.ui.detail
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.core.net.toUri
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.daggermvvmtry.R
-import com.example.daggermvvmtry.api.model.Trailer
-import com.example.daggermvvmtry.Const
+import com.example.popularmovies_kotlin.R
+import com.example.popularmovies_kotlin.api.models.Trailer
+import com.example.popularmovies_kotlin.Const
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.trailer_grid_view_item.view.*
 

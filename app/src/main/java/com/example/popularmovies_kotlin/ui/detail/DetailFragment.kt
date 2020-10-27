@@ -1,4 +1,4 @@
-package com.example.daggermvvmtry.ui.detail
+package com.example.popularmovies_kotlin.ui.detail
 
 import android.content.Context
 import android.content.Intent
@@ -14,13 +14,13 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.daggermvvmtry.R
-import com.example.daggermvvmtry.api.model.Movie
-import com.example.daggermvvmtry.api.model.Trailer
-import com.example.daggermvvmtry.App
-import com.example.daggermvvmtry.Const
-import com.example.daggermvvmtry.MovieApiStatus
-import com.example.daggermvvmtry.ViewModelFactory
+import com.example.popularmovies_kotlin.R
+import com.example.popularmovies_kotlin.api.models.Movie
+import com.example.popularmovies_kotlin.api.models.Trailer
+import com.example.popularmovies_kotlin.App
+import com.example.popularmovies_kotlin.Const
+import com.example.popularmovies_kotlin.MovieApiStatus
+import com.example.popularmovies_kotlin.ViewModelFactory
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_detail.*
 import javax.inject.Inject
@@ -149,7 +149,6 @@ class DetailFragment : Fragment() {
                 .error(R.drawable.ic_broken_image)
                 .into(imageView)
         }
-
     }
 
 }

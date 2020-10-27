@@ -1,13 +1,13 @@
-package com.example.daggermvvmtry.ui.detail
+package com.example.popularmovies_kotlin.ui.detail
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.daggermvvmtry.api.model.Movie
-import com.example.daggermvvmtry.api.model.Trailer
-import com.example.daggermvvmtry.api.repository.MovieRepository
-import com.example.daggermvvmtry.MovieApiStatus
+import com.example.popularmovies_kotlin.api.models.Movie
+import com.example.popularmovies_kotlin.api.models.Trailer
+import com.example.popularmovies_kotlin.api.repository.MovieRepository
+import com.example.popularmovies_kotlin.MovieApiStatus
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

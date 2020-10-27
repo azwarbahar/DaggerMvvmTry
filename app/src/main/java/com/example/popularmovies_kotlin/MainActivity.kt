@@ -1,8 +1,8 @@
-package com.example.daggermvvmtry
+package com.example.popularmovies_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.daggermvvmtry.R
+import com.example.popularmovies_kotlin.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
