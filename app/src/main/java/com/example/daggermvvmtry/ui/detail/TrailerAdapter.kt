@@ -1,0 +1,69 @@
+package com.example.daggermvvmtry.ui.detail
+
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.core.net.toUri
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.example.daggermvvmtry.R
+import com.example.daggermvvmtry.api.model.Trailer
+import com.example.daggermvvmtry.Const
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.trailer_grid_view_item.view.*
+
+
+class TrailerAdapter(private val onClickListener: OnClickListener) : ListAdapter<Trailer, TrailerAdapter.TrailerHolder>(DiffCallback) {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrailerHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.trailer_grid_view_item, parent, false)
+        Log.d("TAG", "onCreateViewHolder TRAILER")
+        return TrailerHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: TrailerHolder, position: Int) {
+        val trailer = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(trailer)
+        }
+        holder.bind(trailer)
+    }
+
+    class TrailerHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        fun bind(trailer: Trailer) {
+            Log.d("TAG", "showTrailers TRAILER " + trailer.name)
+            itemView.trailer_name.text = trailer.name
+
+            val imgUrl = Const.YOUTUBE_THUMBNAIL_START_URL + trailer.key + Const.YOUTUBE_THUMBNAIL_END_URL
+            imgUrl.let {
+                val imgUri = imgUrl.toUri().buildUpon().scheme("https").build()
+                Picasso.get()
+                    .load(imgUri)
+                    .placeholder(R.drawable.loading_animation)
+                    .error(R.drawable.ic_broken_image)
+                    .into(itemView.trailer_image)
+            }
+
+        }
+
+    }
+
+    companion object DiffCallback : DiffUtil.ItemCallback<Trailer>() {
+
+        override fun areItemsTheSame(oldItem: Trailer, newItem: Trailer): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: Trailer, newItem: Trailer): Boolean {
+            return oldItem == newItem
+        }
+    }
+
+    class OnClickListener(val clickListener: (trailer: Trailer) -> Unit) {
+        fun onClick(trailer: Trailer) = clickListener(trailer)
+    }
+
+}

@@ -1,18 +1,29 @@
 package com.example.daggermvvmtry.api
 
-import com.example.daggermvvmtry.data.model.Result
-import com.example.daggermvvmtry.data.model.ResultWrapper
+import com.example.daggermvvmtry.api.model.MoviesResult
+import com.example.daggermvvmtry.api.model.TrailersResult
+import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
+
 
 interface MovieApi {
 
-    @GET("4/discover/movie?sort_by=popularity.desc")
-    suspend fun getTopMovies(): ResultWrapper<Result>
+    @GET("discover/movie")
+    fun getTopRatedMovies(
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String,
+        @Query("sort_by") sort_by: String,
+        @Query("include_adult") include_adult: String,
+        @Query("include_video") include_video: String,
+        @Query("page") page: Int
+    ): Deferred<MoviesResult>
 
-
-    @GET("3/movie/{movieId}")
-    suspend fun getMovieDetails(@Path("movieId") movieId: Int): Result
-
-
+    @GET("movie/{MOVIE_ID}/videos")
+    fun getTrailers(
+        @Path("MOVIE_ID") movieId: Int,
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String
+    ): Deferred<TrailersResult>
 }
