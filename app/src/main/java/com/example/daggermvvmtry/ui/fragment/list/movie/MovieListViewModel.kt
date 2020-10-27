@@ -28,8 +28,9 @@ class MovieListViewModel  : Fragment(), MovieListAdapter.OnItemClickListener{
         return inflater.inflate(R.layout.fragment_movie, container, false)
     }
 
-
     override fun onItemClicked(movie: Result) {
         TODO("Not yet implemented")
     }
+
+
 }

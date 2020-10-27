@@ -1,5 +1,6 @@
 package com.example.daggermvvmtry.data.network
 
+
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.daggermvvmtry.data.model.Result
@@ -18,5 +19,9 @@ interface MovieDao {
 
     @Query("SELECT * FROM movies WHERE id = :id")
     suspend fun getMovie(id: Int): Result?
+
+
+    @Query("SELECT * FROM movies ORDER BY title ASC")
+    fun getAllMovies(): LiveData<List<Result>>
 
 }

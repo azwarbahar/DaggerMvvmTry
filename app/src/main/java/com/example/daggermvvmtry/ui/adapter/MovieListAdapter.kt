@@ -22,7 +22,6 @@ class MovieListAdapter : ListAdapter<Result, MovieListAdapter.ViewHolder>(
 
     }
 
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = getItem(position)
         holder.bind(movie)
