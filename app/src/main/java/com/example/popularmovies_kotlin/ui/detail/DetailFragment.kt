@@ -65,6 +65,7 @@ class DetailFragment : Fragment() {
 
         setupRecyclerView()
 
+
         observeApiStatus()
 
     }
