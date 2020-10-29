@@ -24,13 +24,13 @@ https://github.com/azwarbahar07/DaggerMvvmTry.git
 ##### Open the App.kt class
 if there is an error like this:
 
-<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/dagger.PNG" height="100" width="160">
+<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/dagger.PNG" height="150" width="300">
 
 
 
 Open Build on the tab menu> select Rebuild Project
 
-<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/WhatsApp%20Image%202020-10-30%20at%2000.12.52.jpeg" height="100" width="160">
+<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/WhatsApp%20Image%202020-10-30%20at%2000.12.52.jpeg" height="200" width="200">
 
 
 
@@ -41,5 +41,5 @@ then open the Const.kt class and modify it with your API KEY
 ```bash
 const val API_KEY = "your_api_key"
 ```
-<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/apikey.PNG" height="100" width="160">
+<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/apikey.PNG" height="150" width="300">
 
