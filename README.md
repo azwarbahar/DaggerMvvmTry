@@ -35,7 +35,7 @@ Open Build on the tab menu> select Rebuild Project
 
 
 ## Set API KEY
-untuk mendapatkan API KEY kunjungi [The Movie Database (TMDb)](https://www.themoviedb.org/)
+To get the KEY API visit [The Movie Database (TMDb)](https://www.themoviedb.org/)
 
 then open the Const.kt class and modify it with your API KEY
 ```bash
