@@ -4,7 +4,7 @@ object Const {
 
     private const val BASE_IMAGE_URL = "https://image.tmdb.org/t/p/"
 
-    const val API_KEY = "5c0608aeddb9e3c69d0b674a9ec6295a"
+    const val API_KEY = "your_api_key"
     const val BASE_URL = "https://api.themoviedb.org/3/"
 
     private const val IMAGE_SIZE_W342 = "w342"
