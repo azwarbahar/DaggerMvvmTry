@@ -1,9 +1,13 @@
 # DaggerMvvmTry
 
-
-![alt text](https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/Screenshot_2020_1029_194019.jpg =250x250)  
-![alt text](https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/Screenshot_2020_1029_194040.jpg =250x250) 
+<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/Screenshot_2020_1029_194019.jpg" height="24" width="48">
 
 
 
-###### Using : 
+![alt text](https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/Screenshot_2020_1029_194019.jpg)  
+![alt text](https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/Screenshot_2020_1029_194040.jpg) 
+
+
+
+
+### Using : 
