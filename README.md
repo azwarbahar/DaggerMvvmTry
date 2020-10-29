@@ -30,7 +30,7 @@ if there is an error like this:
 
 Open Build on the tab menu> select Rebuild Project
 
-<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/WhatsApp%20Image%202020-10-30%20at%2000.12.52.jpeg" height="200" width="200">
+<img src="https://github.com/azwarbahar07/DaggerMvvmTry/blob/master/Screanshoot/WhatsApp%20Image%202020-10-30%20at%2000.12.52.jpeg" height="350" width="400">
 
 
 
