@@ -15,7 +15,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-class DetailViewModel @Inject constructor(private val movieRepository: MovieRepository) : ViewModel() {
+class DetailViewModel
+@Inject
+constructor(private val movieRepository: MovieRepository) : ViewModel() {
 
     fun onViewInit(movie: Movie) {
         _selectedMovie.value = movie
@@ -42,8 +44,9 @@ class DetailViewModel @Inject constructor(private val movieRepository: MovieRepo
     private val _trailers = MutableLiveData<List<Trailer>>()
     val trailers: LiveData<List<Trailer>>
         get() = _trailers
-
-    private var viewModelJob = Job() // Coroutines Job
+    
+    // Coroutines Job
+    private var viewModelJob = Job()
 
     // A coroutine scope for that new job using the main dispatcher
     private val coroutineScope = CoroutineScope(

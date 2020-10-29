@@ -1,7 +1,6 @@
 package com.example.popularmovies_kotlin
 
 object Const {
-
     private const val BASE_IMAGE_URL = "https://image.tmdb.org/t/p/"
 
     const val API_KEY = "your_api_key"

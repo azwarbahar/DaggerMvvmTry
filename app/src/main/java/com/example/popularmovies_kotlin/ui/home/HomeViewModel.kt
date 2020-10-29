@@ -13,7 +13,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-class HomeViewModel @Inject constructor(private val movieRepository: MovieRepository): ViewModel()  {
+class HomeViewModel
+
+@Inject
+constructor(private val movieRepository: MovieRepository) : ViewModel() {
 
     // The most recent API response
     private val _apiStatus = MutableLiveData<MovieApiStatus>()
@@ -30,11 +33,13 @@ class HomeViewModel @Inject constructor(private val movieRepository: MovieReposi
     val navigateToSelectedMovie: LiveData<Movie>
         get() = _navigateToSelectedMovie
 
-    private var viewModelJob = Job() // Coroutines Job
+    // Coroutines Job
+    private var viewModelJob = Job()
 
     // A coroutine scope for that new job using the main dispatcher
     private val coroutineScope = CoroutineScope(
-        viewModelJob + Dispatchers.Main )
+        viewModelJob + Dispatchers.Main
+    )
 
     init {
         getTopRatedMovies(MovieApiFilter.POPULAR_MOVIES)

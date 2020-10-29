@@ -19,15 +19,13 @@ import javax.inject.Inject
 
 class HomeFragment : Fragment() {
 
-
-
     @Inject
     internal lateinit var viewModelFactory: ViewModelFactory<HomeViewModel>
     private lateinit var viewModel: HomeViewModel
 
     private val adapter: MovieAdapter by lazy {
         MovieAdapter(MovieAdapter.OnClickListener {
-            viewModel.displayMovieDetails(it) // Set the Movie to the _navigateToSelectedMovie Live Data
+            viewModel.displayMovieDetails(it)
         })
     }
 
@@ -37,8 +35,10 @@ class HomeFragment : Fragment() {
         (requireActivity().application as App).appComponent.inject(this)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -100,7 +100,6 @@ class HomeFragment : Fragment() {
     }
 
 
-
     private fun showMovies(movies: List<Movie>) {
         adapter.submitList(movies)
     }
@@ -113,11 +112,6 @@ class HomeFragment : Fragment() {
         movie_recycler_view.adapter = adapter
     }
 
-
-
-    /**
-     * Inflates the overflow menu that contains filtering options.
-     */
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.overflow_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -136,5 +130,4 @@ class HomeFragment : Fragment() {
         )
         return true
     }
-
 }

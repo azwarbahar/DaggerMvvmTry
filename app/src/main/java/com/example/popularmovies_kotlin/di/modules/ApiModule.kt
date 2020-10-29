@@ -23,14 +23,8 @@ class ApiModule {
     ): MovieApi =
         Retrofit.Builder()
             .baseUrl(Const.BASE_URL)
-            .client(
-                okHttpClient
-                    .build()
-            )
-            .addConverterFactory(
-                GsonConverterFactory.create(
-                )
-            )
+            .client(okHttpClient
+                    .build()).addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
             .create(MovieApi::class.java)

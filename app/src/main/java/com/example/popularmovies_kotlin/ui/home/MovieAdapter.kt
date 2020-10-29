@@ -42,9 +42,7 @@ class MovieAdapter(private val onClickListener: OnClickListener) : ListAdapter<M
                     .error(R.drawable.ic_broken_image)
                     .into(itemView.movieImage)
             }
-
         }
-
     }
 
     companion object DiffCallback : DiffUtil.ItemCallback<Movie>() {
